@@ -24,7 +24,8 @@ class Trailet {
 		this.frameCounter = 0;
 
 		// trailet cosmetics
-		this.color = "#DC3684";
+		this.sColor = [252, 100, 0]; // starting color rgb
+		this.eColor = [128, 17, 0]; // ending color rgb
 		this.startSize = 10;
 	}
 	respawn(x, y, frames) {
@@ -35,9 +36,15 @@ class Trailet {
 	}
 
 	draw() {
+		let color = [
+			this.pComplete * (this.eColor[0]-this.sColor[0]) + this.sColor[0], 
+			this.pComplete * (this.eColor[1]-this.sColor[1]) + this.sColor[1],
+			this.pComplete * (this.eColor[2]-this.sColor[2]) + this.sColor[2]
+		];
+
 		ctx.beginPath();
 		ctx.arc(this.x * canvas.width, this.y * canvas.height, this.startSize * (1 - this.pComplete), 0, Math.PI * 2, false);
-		ctx.fillStyle = this.color;
+		ctx.fillStyle = "rgb("+color[0]+", "+color[1]+", "+color[2]+")";
 		ctx.fill();
 	}
 
@@ -65,17 +72,16 @@ class Droplet {
 		this.x = x; // float-range(0, 1)
 		this.y = y; // float-range(0, 1)
 		this.vx = 0;
-		this.vy = 1.5;
+		this.vy = 2;
 
 		// droplet cosmetics
-		this.color = "#DC3684";
-		this.rgb = [220, 54, 132];
+		this.color = "#FF7500";
 		this.size = 10;
 
 		// trail variables (position is a function of droplet variables)
 		this.trailets = [];
-		this.trailetCount = 6;
-		this.trailetFrames = 100; // num frames for trail to disappear
+		this.trailetCount = 8;
+		this.trailetFrames = 60; // num frames for trail to disappear
 		this.frequency = Math.floor(this.trailetFrames / this.trailetCount); // frequency of trailet creation: in num frames
 		this.spawnCounter = Math.floor(Math.random() * this.frequency); // spawn clock
 		this.spawnIndex = 0; // next trailet in this.trailets to be respawned: by index
@@ -94,10 +100,7 @@ class Droplet {
 	draw() {
 		ctx.beginPath();
 		ctx.arc(this.x*canvas.width, this.y*canvas.height, this.size, 0, Math.PI * 2, false);
-		// float-range(0, 1): 0 is new spawn, 1 is next spawn
-		let timeToSpawn = (this.spawnCounter % this.frequency) / this.frequency;
-		let opacity = 1;//(1 - timeToSpawn);
-		ctx.fillStyle = "rgba("+this.rgb[0]+", "+this.rgb[1]+", "+this.rgb[2]+", "+opacity+")";
+		ctx.fillStyle = this.color;
 		ctx.fill();
 	}
 
@@ -152,7 +155,7 @@ class Pondlet {
 
 //initialize list of droplets and its variable characteristics
 let droplets = [];
-let dropletFrequency = 100;
+let dropletFrequency = 40;
 let dropletCount = Math.floor(canvas.height / dropletFrequency) + 1;
 if (dropletCount < 5) {
 	dropletCount = 5;
