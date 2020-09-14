@@ -65,16 +65,17 @@ class Droplet {
 		this.x = x; // float-range(0, 1)
 		this.y = y; // float-range(0, 1)
 		this.vx = 0;
-		this.vy = 3;
+		this.vy = 1.5;
 
 		// droplet cosmetics
 		this.color = "#DC3684";
+		this.rgb = [220, 54, 132];
 		this.size = 10;
 
 		// trail variables (position is a function of droplet variables)
 		this.trailets = [];
-		this.trailetCount = 8;
-		this.trailetFrames = 80; // num frames for trail to disappear
+		this.trailetCount = 6;
+		this.trailetFrames = 100; // num frames for trail to disappear
 		this.frequency = Math.floor(this.trailetFrames / this.trailetCount); // frequency of trailet creation: in num frames
 		this.spawnCounter = Math.floor(Math.random() * this.frequency); // spawn clock
 		this.spawnIndex = 0; // next trailet in this.trailets to be respawned: by index
@@ -93,7 +94,10 @@ class Droplet {
 	draw() {
 		ctx.beginPath();
 		ctx.arc(this.x*canvas.width, this.y*canvas.height, this.size, 0, Math.PI * 2, false);
-		ctx.fillStyle = this.color;
+		// float-range(0, 1): 0 is new spawn, 1 is next spawn
+		let timeToSpawn = (this.spawnCounter % this.frequency) / this.frequency;
+		let opacity = 1;//(1 - timeToSpawn);
+		ctx.fillStyle = "rgba("+this.rgb[0]+", "+this.rgb[1]+", "+this.rgb[2]+", "+opacity+")";
 		ctx.fill();
 	}
 
@@ -149,21 +153,37 @@ class Pondlet {
 //initialize list of droplets and its variable characteristics
 let droplets = [];
 let dropletFrequency = 100;
-let dropletCount = 1//Math.floor(canvas.height / dropletFrequency);
-/*if (dropletCount < 5) {
+let dropletCount = Math.floor(canvas.height / dropletFrequency) + 1;
+if (dropletCount < 5) {
 	dropletCount = 5;
-}*/
+}
 
 function init() {
 	for (let i = 0; i < dropletCount; i++) {
-		droplets.push(new Droplet((Math.floor(Math.random() * (canvas.width + 1))/canvas.width), 0));
+		droplets.push(new Droplet(-10, 0));
 	}
 }
+
+
+// droplet spawn variables
+let spawnCounter = 0;
+let spawnIndex = 0;
 
 // animates objects
 function animate() {
 	requestAnimationFrame(animate);
 	ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+	if (spawnCounter % dropletFrequency == 0) {
+		droplets[spawnIndex].respawn((Math.floor(Math.random() * (canvas.width + 1))/canvas.width), -0.01);
+
+		spawnIndex++;
+		if (spawnIndex >= droplets.length) {
+			spawnIndex = 0;
+		}
+
+	}
+	spawnCounter++;
 
 	for (let i = 0; i < droplets.length; i++) {
 		droplets[i].update();
