@@ -11,11 +11,38 @@
 </head>
 <body>
 
-	<div class="container" id="canvas-title">
-		<h1>Jason Godmere</h1>
+	<div>
+		<div class="container" id="canvas-title">
+			<h1>Jason Godmere</h1>
+		</div>
+
+		<canvas id="canvas1"></canvas>
+		<script src="{% static 'main/js/particle_effect_2.js' %}"></script>
 	</div>
 
-	<canvas id="canvas1"></canvas>
-	<script src="{% static 'main/js/particle_effect_2.js' %}"></script>
+	<div class="container" style="padding-top: 100vh;">
+		<div id="navbar">
+		<div class="inner-container">
+			<ul>
+				<li><a href="/">HOME</a></li>
+				<li><a href="/">HOME</a></li>
+			</ul>
+		</div>
+		</div>
+
+		<div id="about-content">
+			<div class="inner-container">
+				<h1 class="content-header--lg">ABOUT</h1>
+			</div>
+		</div>
+
+		<div id="projects-content">
+			<div class="inner-container">
+				<h1 class="content-header--lg">PROJECTS</h1>
+			</div>
+		</div>
+
+	</div>
+
 </body>
 </html>

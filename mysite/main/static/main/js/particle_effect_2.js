@@ -26,7 +26,7 @@ class Trailet {
 		// trailet cosmetics
 		this.sColor = [252, 100, 0]; // starting color rgb
 		this.eColor = [128, 17, 0]; // ending color rgb
-		this.startSize = 10;
+		this.startSize = 4;
 	}
 	respawn(x, y, frames) {
 		this.x = x; // float-range(0, 1)
@@ -72,16 +72,16 @@ class Droplet {
 		this.x = x; // float-range(0, 1)
 		this.y = y; // float-range(0, 1)
 		this.vx = 0;
-		this.vy = 2;
+		this.vy = 1.5;
 
 		// droplet cosmetics
 		this.color = "#FF7500";
-		this.size = 10;
+		this.size = 4;
 
 		// trail variables (position is a function of droplet variables)
 		this.trailets = [];
-		this.trailetCount = 8;
-		this.trailetFrames = 60; // num frames for trail to disappear
+		this.trailetCount = 10;
+		this.trailetFrames = 200; // num frames for trail to disappear
 		this.frequency = Math.floor(this.trailetFrames / this.trailetCount); // frequency of trailet creation: in num frames
 		this.spawnCounter = Math.floor(Math.random() * this.frequency); // spawn clock
 		this.spawnIndex = 0; // next trailet in this.trailets to be respawned: by index
@@ -155,7 +155,7 @@ class Pondlet {
 
 //initialize list of droplets and its variable characteristics
 let droplets = [];
-let dropletFrequency = 40;
+let dropletFrequency = 20;
 let dropletCount = Math.floor(canvas.height / dropletFrequency) + 1;
 if (dropletCount < 5) {
 	dropletCount = 5;
