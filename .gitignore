@@ -2,6 +2,7 @@
 ###CUSTOM###
 settings.py
 frontend-ex/
+.vscode/
 
 
 ###GITHUB TEMPLATE DEFAULTS###
