@@ -2,6 +2,7 @@
 .Port-container {
   color: rgb(80,80,80);
   margin: auto;
+  padding-bottom: 4em;
   max-width: 1000px;
 }
 .Port-container p {
@@ -13,9 +14,13 @@
 .Port-container li {
   font-size: 1.2em;
 }
+.Port-container a {
+  text-decoration: none;
+  color: rgb(20, 80, 220);
+}
 
 .Port-header--lg {
-  padding-top: 2em;
+  padding-top: 1.5em;
   padding-bottom: 2em;
   font-size: 2.2em;
   margin: 0;
@@ -101,5 +106,26 @@
 
 
 .Projects-container {
-  background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2em;
+  row-gap: 2em;
+}
+.project {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 12em 1fr;
+  column-gap: 1em;
+}
+.project img {
+  width: 12em;
+}
+.project p {
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 1em;
+}
+.project-title {
+  margin: 0;
+  padding: 0;
 }

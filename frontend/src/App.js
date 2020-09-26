@@ -38,7 +38,7 @@ class App extends Component {
             A full-stack developer</h3>
         </header>
         <About/>
-        <Projects/>
+        <div className="App-projects-container"><Projects/></div>
       </div>
     );
   }

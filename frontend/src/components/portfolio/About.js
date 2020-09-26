@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import {Pie} from 'react-chartjs-2';
 import './Portfolio.css';
 
-// images
-import molecule from './images/molecule.png';
-import mouse from './images/mouse.png';
-import responsive from './images/responsive.png';
-import stopwatch from './images/stopwatch.png';
-
 
 export default class About extends Component {
   render() {
@@ -29,26 +23,26 @@ export default class About extends Component {
           </div>
           <div>
             <h2>Skills</h2>
-            <div class="About-skills-container">
+            <div className="About-skills-container">
               <p>Python</p>
-              <div class="About-skills">
-                <div class="About-skill python"><p>90%</p></div>
+              <div className="About-skills">
+                <div className="About-skill python"><p>90%</p></div>
               </div>
               <p>HTML/CSS</p>
-              <div class="About-skills">
-                <div class="About-skill html-css"><p>80%</p></div>
+              <div className="About-skills">
+                <div className="About-skill html-css"><p>80%</p></div>
               </div>
               <p>JavaScript</p>
-              <div class="About-skills">
-                <div class="About-skill js"><p>70%</p></div>
+              <div className="About-skills">
+                <div className="About-skill js"><p>70%</p></div>
               </div>
               <p>PHP</p>
-              <div class="About-skills">
-                <div class="About-skill php"><p>40%</p></div>
+              <div className="About-skills">
+                <div className="About-skill php"><p>40%</p></div>
               </div>
               <p>Java</p>
-              <div class="About-skills">
-                <div class="About-skill java"><p>30%</p></div>
+              <div className="About-skills">
+                <div className="About-skill java"><p>30%</p></div>
               </div>
             </div>
           </div>
@@ -56,10 +50,10 @@ export default class About extends Component {
 
         
 
-        <div class="About-chart-container">
+        <div className="About-chart-container">
           <div>
-            <h2 class="Port-header--sm Port-header--list">Back-End</h2>
-            <ul class="Port--list">
+            <h2 className="Port-header--sm Port-header--list">Back-End</h2>
+            <ul className="Port--list">
               <li>Django</li>
               <li>ORM</li>
               <li>SQL</li>
@@ -68,7 +62,7 @@ export default class About extends Component {
             </ul>
           </div>
           <div>
-            <Pie class="About-pie-chart"
+            <Pie className="About-pie-chart"
               data={chartData}
               options={{
                 legend: {
@@ -82,15 +76,15 @@ export default class About extends Component {
             />
           </div>
           <div>
-            <h2 class="Port-header--sm Port-header--list">Front-End</h2>
-            <ul class="Port--list">
+            <h2 className="Port-header--sm Port-header--list">Front-End</h2>
+            <ul className="Port--list">
               <li>React</li>
               <li>D3</li>
               <li>Chart.js</li>
               <li>jQuery</li>
             </ul>
-            <h2 class="Port-header--sm Port-header--list">Mobile</h2>
-            <ul class="Port--list">
+            <h2 className="Port-header--sm Port-header--list">Mobile</h2>
+            <ul className="Port--list">
               <li>IOS</li>
               <li>Android</li>
             </ul>
