@@ -17,34 +17,44 @@ export default class About extends Component {
 
         <div className="About-header">
           <div>
-            <img className="About-icon" src={stopwatch} alt="Clock"/>
-            <h2 className="Port-header--md">Fast</h2>
+            <h2>Bio</h2>
             <p>
-              Fast load times and lag free interaction, my highest priority.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna 
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit 
+              esse cillum dolore eu fugiat nulla pariatur.
             </p>
           </div>
           <div>
-            <img className="About-icon" src={responsive} alt="Clock"/>
-            <h2 className="Port-header--md">Responsive</h2>
-            <p>
-              My layouts will work on any device, big or small.
-            </p>
-          </div>
-          <div>
-            <img className="About-icon" src={mouse} alt="Clock"/>
-            <h2 className="Port-header--md">Intuitive</h2>
-            <p>
-              Strong preference for easy to use, intuitive UX/UI.
-            </p>
-          </div>
-          <div>
-            <img className="About-icon" src={molecule} alt="Clock"/>
-            <h2 className="Port-header--md">Dynamic</h2>
-            <p>
-              Websites don't have to be static, I love making pages come to life.
-            </p>
+            <h2>Skills</h2>
+            <div class="About-skills-container">
+              <p>Python</p>
+              <div class="About-skills">
+                <div class="About-skill python"><p>90%</p></div>
+              </div>
+              <p>HTML/CSS</p>
+              <div class="About-skills">
+                <div class="About-skill html-css"><p>80%</p></div>
+              </div>
+              <p>JavaScript</p>
+              <div class="About-skills">
+                <div class="About-skill js"><p>70%</p></div>
+              </div>
+              <p>PHP</p>
+              <div class="About-skills">
+                <div class="About-skill php"><p>40%</p></div>
+              </div>
+              <p>Java</p>
+              <div class="About-skills">
+                <div class="About-skill java"><p>30%</p></div>
+              </div>
+            </div>
           </div>
         </div>
+
+        
 
         <div class="About-chart-container">
           <div>
@@ -81,9 +91,8 @@ export default class About extends Component {
             </ul>
             <h2 class="Port-header--sm Port-header--list">Mobile</h2>
             <ul class="Port--list">
-              <li>Swift-UI</li>
-              <li>Swift</li>
-              <li>Kotlin</li>
+              <li>IOS</li>
+              <li>Android</li>
             </ul>
           </div>
         </div>
@@ -97,7 +106,7 @@ const chartData = {
   labels: ['Back-End', 'Front-End', 'Mobile'],
   datasets: [{
     label: '# of Votes',
-    data: [45, 45, 10],
+    data: [50, 40, 10],
     backgroundColor: [
       'rgba(255, 99, 132, 0.2)',
       'rgba(54, 162, 235, 0.2)',

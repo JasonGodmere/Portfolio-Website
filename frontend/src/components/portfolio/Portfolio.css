@@ -4,6 +4,16 @@
   margin: auto;
   max-width: 1000px;
 }
+.Port-container p {
+  font-size: 1.2em;
+  text-align: left;
+  margin-right: 2ch;
+  margin-left: 2ch;
+}
+.Port-container li {
+  font-size: 1.2em;
+}
+
 .Port-header--lg {
   padding-top: 2em;
   padding-bottom: 2em;
@@ -29,37 +39,52 @@
   margin: 0;
   padding: 0;
 }
-.Port--list > li {
-  font-size: 1.2em;
-}
 
 /*grid wrapper*/
 .About-header {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 /*grid boxes*/
 .About-header > div {
   margin: 0;
   padding: 0;
 }
-.About-header p {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0;
-}
 
-.About-icon {
-  height: 4em;
-  width: 4em;
-  padding: 2em;
-  background-image: url("./images/hexagon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+/* Skills chart on about page */
+.About-skills-container {
+  margin-right: 1em;
+  margin-left: 1em;
 }
+.About-skills-container > p {
+  padding-left: 0;
+  padding-bottom: 0.2em;
+  margin-left: 0;
+  margin-bottom: 0.2em;
+}
+.About-skills {
+  width: 100%;
+  background-color: #ddd;
+}
+.About-skill {
+  padding: 0;
+  color: white;
+}
+.About-skill > p {
+  font-size: 1em;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.python {width: 90%; background-color: #4CAF50;}
+.html-css {width: 80%; background-color: #4CAF50;}
+.js {width: 70%; background-color: #4CAF50;}
+.php {width: 40%; background-color: #4CAF50;}
+.java {width: 30%; background-color: #4CAF50;}
 
 .About-chart-container {
   margin-top: 3em;
