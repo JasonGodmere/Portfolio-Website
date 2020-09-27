@@ -35,7 +35,7 @@ export default function Projects() {
               IOS Version
             </a>
             {' | '}
-            <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.access.wifi.consumer&hl=en_US" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.hawaiienergyconnection.envwifi&hl=en_US" target="_blank">
               Android Version
             </a>
             <p>

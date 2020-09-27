@@ -8,8 +8,6 @@
 .Port-container p {
   font-size: 1.2em;
   text-align: left;
-  margin-right: 2ch;
-  margin-left: 2ch;
 }
 .Port-container li {
   font-size: 1.2em;
@@ -51,6 +49,9 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 /*grid boxes*/
 .About-header > div {
@@ -63,38 +64,36 @@
   margin-right: 1em;
   margin-left: 1em;
 }
-.About-skills-container > p {
-  padding-left: 0;
-  padding-bottom: 0.2em;
-  margin-left: 0;
-  margin-bottom: 0.2em;
-}
 .About-skills {
   width: 100%;
-  background-color: #ddd;
+  margin-bottom: 0.5em;
+  background-color: #41B853;
+  float: left;
 }
 .About-skill {
   padding: 0;
+  margin: 0;
   color: white;
 }
 .About-skill > p {
   font-size: 1em;
-  text-align: left;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  margin-right: 0.5em;
 }
-.python {width: 90%; background-color: #4CAF50;}
-.html-css {width: 80%; background-color: #4CAF50;}
-.js {width: 70%; background-color: #4CAF50;}
-.php {width: 40%; background-color: #4CAF50;}
-.java {width: 30%; background-color: #4CAF50;}
+.python {width: 10%; background-color: white; float: right;}
+.html-css {width: 10%; background-color: white; float: right;}
+.js {width: 30%; background-color: white; float: right;}
+.php {width: 60%; background-color: white; float: right;}
+.java {width: 70%; background-color: white; float: right;}
 
 .About-chart-container {
-  margin-top: 3em;
+  width: 80%;
+  margin: auto;
+  margin-top: 5em;
   display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-columns: 3fr 2fr;
 }
 .About-chart-container > div {
   min-height: 22em;
@@ -102,6 +101,21 @@
 .About-pie-chart {
   padding: 0;
   margin: 0;
+}
+.About-chart-list {
+  width: 18ch;
+  margin: auto;
+  border-radius: 0.5em;
+  color: #606060;
+}
+.chart-list--blue {
+  box-shadow: 0 0.25em 0.5em 0.25em rgba(54, 162, 235, 0.2);
+}
+.chart-list--red {
+  box-shadow: 0 0.25em 0.5em 0.25em rgba(255, 99, 132, 0.2);
+}
+.chart-list--yellow {
+  box-shadow: 0 0.25em 0.5em 0.25em rgba(255, 206, 86, 0.2);
 }
 
 
@@ -128,4 +142,9 @@
 .project-title {
   margin: 0;
   padding: 0;
+}
+
+
+.Contact-container {
+  color: #f5f5f5;
 }

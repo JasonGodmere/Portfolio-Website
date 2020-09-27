@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import About from './components/portfolio/About';
 import Projects from './components/portfolio/Projects';
+import Contact from './components/portfolio/Contact';
 
 class App extends Component {
   state = {
@@ -38,7 +39,13 @@ class App extends Component {
             A full-stack developer</h3>
         </header>
         <About/>
-        <div className="App-projects-container"><Projects/></div>
+        <div className="App-projects-container">
+          <Projects/>
+        </div>
+        <div className="App-footer">
+          <div className="App-footer--shape"></div>
+          <Contact/>
+        </div>
       </div>
     );
   }

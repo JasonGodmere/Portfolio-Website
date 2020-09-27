@@ -24,23 +24,23 @@ export default class About extends Component {
           <div>
             <h2>Skills</h2>
             <div className="About-skills-container">
-              <p>Python</p>
+              <p className="Port-header--sm">Python</p>
               <div className="About-skills">
                 <div className="About-skill python"><p>90%</p></div>
               </div>
-              <p>HTML/CSS</p>
+              <p className="Port-header--sm">HTML/CSS</p>
               <div className="About-skills">
-                <div className="About-skill html-css"><p>80%</p></div>
+                <div className="About-skill html-css"><p>90%</p></div>
               </div>
-              <p>JavaScript</p>
+              <p className="Port-header--sm">JavaScript</p>
               <div className="About-skills">
                 <div className="About-skill js"><p>70%</p></div>
               </div>
-              <p>PHP</p>
+              <p className="Port-header--sm">PHP</p>
               <div className="About-skills">
                 <div className="About-skill php"><p>40%</p></div>
               </div>
-              <p>Java</p>
+              <p className="Port-header--sm">Java</p>
               <div className="About-skills">
                 <div className="About-skill java"><p>30%</p></div>
               </div>
@@ -52,23 +52,11 @@ export default class About extends Component {
 
         <div className="About-chart-container">
           <div>
-            <h2 className="Port-header--sm Port-header--list">Back-End</h2>
-            <ul className="Port--list">
-              <li>Django</li>
-              <li>ORM</li>
-              <li>SQL</li>
-              <li>Wordpress</li>
-              <li>Flask</li>
-            </ul>
-          </div>
-          <div>
             <Pie className="About-pie-chart"
               data={chartData}
               options={{
                 legend: {
-                  labels: {
-                    fontSize: 14
-                  }
+                  display: false
                 },
                 rotation: 0.45 * Math.PI,
                 maintainAspectRatio: false
@@ -76,18 +64,32 @@ export default class About extends Component {
             />
           </div>
           <div>
-            <h2 className="Port-header--sm Port-header--list">Front-End</h2>
-            <ul className="Port--list">
-              <li>React</li>
-              <li>D3</li>
-              <li>Chart.js</li>
-              <li>jQuery</li>
-            </ul>
-            <h2 className="Port-header--sm Port-header--list">Mobile</h2>
-            <ul className="Port--list">
-              <li>IOS</li>
-              <li>Android</li>
-            </ul>
+            <div className="About-chart-list chart-list--red">
+              <h2 className="Port-header--sm Port-header--list">Back-End</h2>
+              <ul className="Port--list">
+                <li>Django</li>
+                <li>ORM</li>
+                <li>SQL</li>
+                <li>Wordpress</li>
+                <li>Flask</li>
+              </ul>
+            </div>
+            <div className="About-chart-list chart-list--blue">
+              <h2 className="Port-header--sm Port-header--list">Front-End</h2>
+              <ul className="Port--list">
+                <li>React</li>
+                <li>D3</li>
+                <li>Chart.js</li>
+                <li>jQuery</li>
+              </ul>
+            </div>
+            <div className="About-chart-list chart-list--yellow">
+              <h2 className="Port-header--sm Port-header--list">Mobile</h2>
+              <ul className="Port--list">
+                <li>IOS</li>
+                <li>Android</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -99,18 +101,14 @@ export default class About extends Component {
 const chartData = {
   labels: ['Back-End', 'Front-End', 'Mobile'],
   datasets: [{
-    label: '# of Votes',
     data: [50, 40, 10],
     backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(54, 162, 235, 0.2)',
-      'rgba(255, 206, 86, 0.2)'
+      'rgba(255, 99, 132, 0.8)',
+      'rgba(54, 162, 235, 0.8)',
+      'rgba(255, 206, 86, 0.8)'
     ],
-    borderColor: [
-      'rgba(255, 99, 132, 1)',
-      'rgba(54, 162, 235, 1)',
-      'rgba(255, 206, 86, 1)'
-    ],
-    borderWidth: 1
+    hoverBorderColor: 'rgba(0,0,0,0)',
+    hoverBorderColor: 'rgba(0,0,0,0)',
+    borderWidth: 8
   }]
 }

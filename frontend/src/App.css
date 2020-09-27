@@ -40,3 +40,13 @@
 .App-projects-container {
   background-color: #f5f5f5;
 }
+
+.App-footer {
+  background-color: #282c34;
+}
+.App-footer--shape {
+  width: 100%;
+	border-left: 50vw solid transparent;
+	border-right: 50vw solid transparent;
+	border-top: 5em solid #f5f5f5;
+}
