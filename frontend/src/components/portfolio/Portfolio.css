@@ -1,6 +1,6 @@
 
 .Port-container {
-  color: rgb(80,80,80);
+  color: rgb(60,60,60);
   margin: auto;
   padding-bottom: 4em;
   max-width: 1000px;
@@ -124,6 +124,8 @@
   grid-template-columns: 1fr;
   column-gap: 2em;
   row-gap: 2em;
+  margin-left: 4em;
+  margin-right: 4em;
 }
 .project {
   text-align: left;
@@ -137,7 +139,6 @@
 .project p {
   padding-left: 0;
   margin-left: 0;
-  font-size: 1em;
 }
 .project-title {
   margin: 0;
