@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import About from './components/portfolio/About';
 import Projects from './components/portfolio/Projects';
@@ -38,6 +40,17 @@ class App extends Component {
             Hi, I'm Jason Godmere{'\n'}
             A full-stack developer</h3>
         </header>
+        <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
+          {/*<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>*/}
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#about">ABOUT</Nav.Link>
+              <Nav.Link href="#projects">PROJECTS</Nav.Link>
+              <Nav.Link href="#contact">CONTACT</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
         <About/>
         <div className="App-projects-container">
           <Projects/>

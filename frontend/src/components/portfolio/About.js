@@ -71,7 +71,6 @@ export default class About extends Component {
                 <li>ORM</li>
                 <li>SQL</li>
                 <li>Wordpress</li>
-                <li>Flask</li>
               </ul>
             </div>
             <div className="About-chart-list chart-list--blue">
@@ -86,8 +85,8 @@ export default class About extends Component {
             <div className="About-chart-list chart-list--yellow">
               <h2 className="Port-header--sm Port-header--list">Mobile</h2>
               <ul className="Port--list">
-                <li>IOS</li>
-                <li>Android</li>
+                <li>SwiftUI</li>
+                <li>Kotlin</li>
               </ul>
             </div>
           </div>
