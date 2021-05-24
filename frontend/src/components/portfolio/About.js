@@ -1,14 +1,31 @@
+import { getDefaultNormalizer } from '@testing-library/dom';
 import React, { Component } from 'react';
-import {Pie} from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import './Portfolio.css';
 
 
 export default class About extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.chartReference = React.createRef();
+  }
+
+  state = {
+    options: {
+      legend: {
+        display: false
+      },
+      rotation: 0.45 * Math.PI,
+      maintainAspectRatio: false
+    },
+    data: chartData
+  };
+
   render() {
     return (
       <div className="Port-container">
         <h1 className="Port-header--lg">ABOUT</h1>
-
         <div className="About-header">
           <div>
             <h2>Bio</h2>
@@ -51,19 +68,10 @@ export default class About extends Component {
         
 
         <div className="About-chart-container">
-          <div>
-            <Pie className="About-pie-chart"
-              data={chartData}
-              options={{
-                legend: {
-                  display: false
-                },
-                rotation: 0.45 * Math.PI,
-                maintainAspectRatio: false
-              }}
-            />
+          <div className="About-pie-chart">
+            <Pie ref={this.chartReference} data={this.state.data} options={this.state.options}/>
           </div>
-          <div>
+          <div className="About-chart-list-container">
             <div className="About-chart-list chart-list--red">
               <h2 className="Port-header--sm Port-header--list">Back-End</h2>
               <ul className="Port--list">
@@ -97,7 +105,7 @@ export default class About extends Component {
   }
 }
 
-const chartData = {
+var chartData = {
   labels: ['Back-End', 'Front-End', 'Mobile'],
   datasets: [{
     data: [50, 40, 10],

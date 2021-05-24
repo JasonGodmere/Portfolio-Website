@@ -3,7 +3,7 @@
   color: rgb(60,60,60);
   margin: auto;
   padding-bottom: 4em;
-  max-width: 1000px;
+  max-width: 55em;
 }
 .Port-container p {
   font-size: 1.2em;
@@ -82,31 +82,38 @@
   margin: 0;
   margin-right: 0.5em;
 }
-.python {width: 10%; background-color: white; float: right;}
-.html-css {width: 10%; background-color: white; float: right;}
-.js {width: 30%; background-color: white; float: right;}
-.php {width: 60%; background-color: white; float: right;}
+.python {width: 0%; background-color: white; float: right;}
+.html-css {width: 0%; background-color: white; float: right;}
+.js {width: 20%; background-color: white; float: right;}
+.php {width: 50%; background-color: white; float: right;}
 .java {width: 70%; background-color: white; float: right;}
+
+
 
 .About-chart-container {
   width: 80%;
   margin: auto;
+  background-color: white;
   margin-top: 5em;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
 }
-.About-chart-container > div {
-  min-height: 22em;
-}
+
 .About-pie-chart {
+  width: 100%;
+  height: 60vw;
+  max-height: 35em;
   padding: 0;
   margin: 0;
 }
+.About-chart-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
+}
 .About-chart-list {
-  width: 18ch;
-  margin: auto;
   border-radius: 0.5em;
   color: #606060;
+  padding-bottom: 4ch;
+  margin-top: 2em;
 }
 .chart-list--blue {
   box-shadow: 0 0.25em 0.5em 0.25em rgba(54, 162, 235, 0.2);
