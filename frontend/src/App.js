@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, NavLink } from 'react-bootstrap';
+import { Link } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import About from './components/portfolio/About';
@@ -44,6 +45,7 @@ class App extends Component {
         </header>
         <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
           {/*<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>*/}
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#about">ABOUT</Nav.Link>
@@ -58,7 +60,7 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <About/>
+        <About />
         <div className="App-projects-container">
           <Projects/>
         </div>

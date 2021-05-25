@@ -9,7 +9,7 @@ export default function Projects() {
     <div className="Port-container">
       <h1 className="Port-header--lg">PROJECTS</h1>
 
-      <div className="Projects-container">
+      <div id="projects" className="Projects-container">
 
         <div className="project">
           <div><img src={ers}/></div>
@@ -19,10 +19,8 @@ export default function Projects() {
               https://energyrecoveryservices.com
             </a>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              A custom built WordPress website and theme utilizing php backend tools
+              for a dynamic multi-page company website/blog with email integration.
             </p>
           </div>
         </div>
@@ -39,10 +37,10 @@ export default function Projects() {
               Android Version
             </a>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              An IOS and Android tool for Enphase customers to easily
+              and seemlessly connect their solar energy monitors to the internet. Automates many
+              of the tedious tasks away; all you need to do is plug it in, press a button
+              on the monitor and input your wifi credentials.
             </p>
           </div>
         </div>
