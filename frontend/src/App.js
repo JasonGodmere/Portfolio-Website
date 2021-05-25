@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button, NavLink } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import About from './components/portfolio/About';
 import Projects from './components/portfolio/Projects';
 import Contact from './components/portfolio/Contact';
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 
 class App extends Component {
   state = {
@@ -42,12 +44,17 @@ class App extends Component {
         </header>
         <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
           {/*<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>*/}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#about">ABOUT</Nav.Link>
               <Nav.Link href="#projects">PROJECTS</Nav.Link>
               <Nav.Link href="#contact">CONTACT</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href="https://www.linkedin.com/in/jason-godmere-6217a3166/">
+                <FaLinkedinIn /></Nav.Link>
+              <Nav.Link href="https://github.com/JasonGodmere">
+                <FaGithub /></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
