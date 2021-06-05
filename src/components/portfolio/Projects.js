@@ -1,7 +1,7 @@
 import React from 'react';
 
 // images
-import ers from './images/energyrecoveryservices.PNG';
+import ers from './images/energyrecoveryservices.png';
 import envwifi from './images/ENV_WiFi.png';
 
 export default function Projects() {

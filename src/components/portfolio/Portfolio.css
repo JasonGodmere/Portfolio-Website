@@ -44,25 +44,44 @@
 }
 
 /*grid wrapper*/
-.About-header {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2em;
-  margin-right: 2em;
-  margin-left: 2em;
+@media screen and (min-width: 40em) {
+  .About-header {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3em;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+  /*grid boxes*/
+  .About-header > div {
+    margin: 0;
+    padding: 0;
+  }
 }
-/*grid boxes*/
-.About-header > div {
-  margin: 0;
-  padding: 0;
+@media screen and (max-width: 40em) {
+  .About-header {
+    margin: 0;
+    padding: 0;
+    display: block;
+    column-gap: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+  /*grid boxes*/
+  .About-header > div {
+    margin: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0;
+  }
 }
 
 /* Skills chart on about page */
 .About-skills-container {
-  margin-right: 1em;
-  margin-left: 1em;
+  margin-right: 0em;
+  margin-left: 0em;
 }
 .About-skills {
   width: 100%;
@@ -104,11 +123,21 @@
   padding: 0;
   margin: 0;
 }
-.About-chart-list-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5%;
+
+@media screen and (min-width: 40em) {
+  .About-chart-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+  }
 }
+@media screen and (max-width: 40em) {
+  .About-chart-list-container {
+    display: block;
+    margin: 0;
+  }
+}
+
 .About-chart-list {
   border-radius: 0.5em;
   color: #606060;
@@ -134,12 +163,27 @@
   margin-left: 4em;
   margin-right: 4em;
 }
-.project {
-  text-align: left;
-  display: grid;
-  grid-template-columns: 12em 1fr;
-  column-gap: 1em;
+
+@media screen and (min-width: 40em) {
+  .project {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 12em 1fr;
+    column-gap: 1em;
+  }
 }
+@media screen and (max-width: 40em) {
+  .project {
+    margin-bottom: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .project p {
+    text-align: center;
+  }
+}
+
 .project img {
   width: 12em;
 }
